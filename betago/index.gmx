@@ -3,7 +3,7 @@ var (
 	Button4       Button4
 	CurrentChess  CurrentChess
 	Cat1          Cat1
-	Sprite1       Sprite1
+	Undoer        Undoer
 	undoIdList    List
 	undoOpList    List
 	undoParamList List
@@ -37,10 +37,10 @@ func initConsts() {
 func calcHitPosition(x float64, y float64) {
 	col = iround((x + 159) / 17.7)
 	row = iround((y - 159) / -17.7)
-	if row < 0 || col < 0 || (row > 18 || col > 18) {
+	if row < 0 || col < 0 || row > 18 || col > 18 {
 		ret = 0
 	} else {
-		ret = row*19 + (col + 1)
+		ret = row*19 + col + 1
 	}
 }
 
@@ -85,7 +85,7 @@ func checkEatChess(row int, col int, expectPlayer int) {
 }
 
 func confirmChessEatenOrNot(row int, col int, expectPlayer int) {
-	if mayBeEaten == 1 && !(row < 0 || col < 0 || (row > 18 || col > 18)) {
+	if mayBeEaten == 1 && !(row < 0 || col < 0 || row > 18 || col > 18) {
 		pos = row*19 + (col + 1)
 		player = gameState.at(pos - 1).int
 		if player == expectPlayer {

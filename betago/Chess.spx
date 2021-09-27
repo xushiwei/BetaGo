@@ -10,7 +10,7 @@ func putChess(op int, id int, val int, newval int) {
 }
 
 onCloned => {
-	id = currentRow*19 + (currentCol + 1)
+	id = currentRow*19 + currentCol + 1
 	putChess 0, id, currentPlayer, currentPlayer
 	setXYpos float64(currentCol)*17.7-159, float64(currentRow)*-17.7+159
 	setCostume currentPlayer-1
