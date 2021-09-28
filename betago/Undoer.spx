@@ -2,8 +2,8 @@ func undo(op int, id int, val int) {
 	undoOpList.delete Last
 	undoIdList.delete Last
 	undoParamList.delete Last
-	currentCol = id-1 % 19
-	currentRow = (id - 1 - currentCol) / 19
+	currentCol = (id - 1) % 19
+	currentRow = (id - 1) / 19
 	currentPlayer = val
 	if op == 0 {
 		if undoOpList.len == 0 {
