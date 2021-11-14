@@ -1,0 +1,43 @@
+func undo(op int, id int, val int) {
+	undoOpList.delete Last
+	undoIdList.delete Last
+	undoParamList.delete Last
+	currentCol = (id - 1) % 19
+	currentRow = (id - 1) / 19
+	currentPlayer = val
+	if op == 0 {
+		if undoOpList.len == 0 {
+			hide
+		}
+		broadcast "try put chess", true
+		gameState.set id-1, _Eating
+		broadcast "eat chesses", true
+		undoing = 0
+	} else {
+		Chess.clone
+	}
+}
+
+onStart => {
+	undoOpList.delete All
+	undoIdList.delete All
+	undoParamList.delete All
+	undoing = 0
+	hide
+}
+
+onClick => {
+	if undoOpList.len > 0 {
+		undoing = 1
+		undo undoOpList.at(Last).int, undoIdList.at(Last).int, undoParamList.at(Last).int
+	}
+}
+
+onMsg "restore eaten chesses", => {
+	currentPlayer = 3 - currentPlayer
+	undo undoOpList.at(Last).int, undoIdList.at(Last).int, undoParamList.at(Last).int
+}
+
+onMsg "put chess done", => {
+	show
+}
