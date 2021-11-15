@@ -2,7 +2,10 @@ module github.com/xushiwei/BetaGo
 
 go 1.16
 
-require github.com/goplus/spx v0.9.8
+require (
+	github.com/goplus/gop v1.0.21
+	github.com/goplus/spx v0.9.8
+)
 
 replace (
 	github.com/hajimehoshi/oto => github.com/hajimehoshi/oto v1.0.1
