@@ -3,8 +3,8 @@ module github.com/xushiwei/BetaGo
 go 1.16
 
 require (
-	github.com/goplus/gop v1.0.21
-	github.com/goplus/spx v0.9.8
+	github.com/goplus/gop v1.0.22
+	github.com/goplus/spx v1.0.0-beta1
 )
 
 replace (
