@@ -7,7 +7,7 @@ BetaGo - a game powered by Go+ Builder
 
 ### BetaGo (It's not AlphaGo)
 
-![Screen Shot](assets/8.png)
+<img src="assets/8.png" width="480">
 
 ### How to run
 
