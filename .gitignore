@@ -1,4 +1,5 @@
-gop_autogen*.go
+BetaGo*
+go.work*
 .gop/
 
 # Binaries for programs and plugins
