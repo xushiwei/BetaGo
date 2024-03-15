@@ -1,4 +1,4 @@
-BetaGo - a game powered by Go+ spx game engine
+BetaGo - a game powered by Go+ Builder
 =========
 
 [![Language](https://img.shields.io/badge/language-Go+-blue.svg)](https://github.com/goplus/gop)
@@ -7,4 +7,9 @@ BetaGo - a game powered by Go+ spx game engine
 
 ### BetaGo (It's not AlphaGo)
 
-TODO
+![Screen Shot](assets/8.png)
+
+### How to run
+
+- Install Go+. See https://github.com/goplus/gop#how-to-install.
+- gop run .

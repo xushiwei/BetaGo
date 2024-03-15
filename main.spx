@@ -136,5 +136,3 @@ onMsg "put chess done", => {
 	checkEat
 	currentPlayer = 3 - currentPlayer
 }
-
-run "res", {Title: "BetaGo (by Go+)"}
