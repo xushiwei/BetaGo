@@ -7,24 +7,24 @@ import "github.com/goplus/spx"
 const _ = true
 
 type Button4 struct {
-	spx.Sprite
+	spx.SpriteImpl
 	*Game
 }
 type Cat1 struct {
-	spx.Sprite
+	spx.SpriteImpl
 	*Game
 }
 type Chess struct {
-	spx.Sprite
+	spx.SpriteImpl
 	*Game
 	id int
 }
 type CurrentChess struct {
-	spx.Sprite
+	spx.SpriteImpl
 	*Game
 }
 type Undoer struct {
-	spx.Sprite
+	spx.SpriteImpl
 	*Game
 }
 type Game struct {
@@ -235,7 +235,7 @@ func (this *Game) MainEntry() {
 //line main.spx:131:1
 	this.OnMsg__1("confirm to put chess", func() {
 //line main.spx:132:1
-		spx.Gopt_Sprite_Clone__0(&this.Chess)
+		spx.Gopt_SpriteImpl_Clone__0(&this.Chess)
 	})
 //line main.spx:135:1
 	this.OnMsg__1("put chess done", func() {
@@ -285,10 +285,10 @@ func (this *Cat1) Main() {
 //line Cat1.spx:7:1
 		if this.currentPlayer == this._Black {
 //line Cat1.spx:8:1
-			this.Say("The black side won!", 3)
+			this.Say__1("The black side won!", 3)
 		} else {
 //line Cat1.spx:10:1
-			this.Say("The white side won!", 3)
+			this.Say__1("The white side won!", 3)
 		}
 //line Cat1.spx:12:1
 		spx.Exit__1()
@@ -322,7 +322,7 @@ func (this *Chess) Main() {
 //line Chess.spx:15:1
 		this.SetXYpos(float64(this.currentCol)*17.7-159, float64(this.currentRow)*-17.7+159)
 //line Chess.spx:16:1
-		this.SetCostume(this.currentPlayer - 1)
+		this.SetCostume__2(this.currentPlayer - 1)
 //line Chess.spx:17:1
 		this.Show()
 //line Chess.spx:18:1
@@ -365,7 +365,7 @@ func (this *CurrentChess) Main() {
 //line CurrentChess.spx:10:1
 		this.SetXYpos(float64(this.currentCol)*17.7-159, float64(this.currentRow)*-17.7+159)
 //line CurrentChess.spx:11:1
-		this.SetCostume(this.currentPlayer - 1)
+		this.SetCostume__2(this.currentPlayer - 1)
 //line CurrentChess.spx:12:1
 		this.Show()
 	})
@@ -404,7 +404,7 @@ func (this *Undoer) undo(op int, id int, val int) {
 		this.undoing = 0
 	} else {
 //line Undoer.spx:17:1
-		spx.Gopt_Sprite_Clone__0(&this.Chess)
+		spx.Gopt_SpriteImpl_Clone__0(&this.Chess)
 	}
 }
 //line Undoer.spx:21
