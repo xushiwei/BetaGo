@@ -2,7 +2,7 @@ module github.com/xushiwei/BetaGo
 
 go 1.18
 
-require github.com/goplus/spx v1.1.0
+require github.com/goplus/spx v1.1.0 //gop:class
 
 require (
 	github.com/ajstarks/svgo v0.0.0-20210927141636-6d70534b1098 // indirect
