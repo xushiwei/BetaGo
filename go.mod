@@ -2,7 +2,7 @@ module github.com/xushiwei/BetaGo
 
 go 1.18
 
-require github.com/goplus/spx v1.1.0 //gop:class
+require github.com/goplus/spx v1.1.2 //gop:class
 
 require (
 	github.com/ajstarks/svgo v0.0.0-20210927141636-6d70534b1098 // indirect
@@ -18,7 +18,7 @@ require (
 	github.com/jezek/xgb v1.1.1 // indirect
 	github.com/pkg/errors v0.9.1 // indirect
 	github.com/qiniu/audio v0.2.1 // indirect
-	github.com/qiniu/x v1.13.10 // indirect
+	github.com/qiniu/x v1.15.1 // indirect
 	github.com/srwiley/oksvg v0.0.0-20210519022825-9fc0c575d5fe // indirect
 	github.com/srwiley/rasterx v0.0.0-20210519020934-456a8d69b780 // indirect
 	golang.org/x/image v0.18.0 // indirect
